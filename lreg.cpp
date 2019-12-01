@@ -12,16 +12,16 @@ using namespace std;
 
 class LinearRegression {
 public:
-	LinearRegression() {};
-	~LinearRegression() {};
-	LinearRegression(vector<double> & m_x_vals_, vector<double> m_y_vals_) : m_y_vals(m_x_vals_),
-	m_y_vals(m_y_vals_), m_num_elems(m_y_vals_.size()) {}
+	LinearRegression() {}
+	~LinearRegression() {}
+	LinearRegression(vector<double> & m_x_vals_, vector<double> m_y_vals_) : m_x_vals(m_x_vals),
+	m_y_vals(m_y_vals_), m_num_elems(m_y_vals_.size()), m_old_err(std::numeric_limits<double>::max()) {}
 
-	void trainAlgorithm(int num_iters_, double a_init_, double b_init_){
+	void trainAlgorithm(int num_iters_, double a_init_, double b_init_) {
 
-		int iter =0;
-		m_a = a_init;
-		m_b = b_init;
+		int iter = 0;
+		m_a = a_init_;
+		m_b = b_init_;
 
 		while(iter < num_iters_) {
 			//update the gradient
@@ -33,7 +33,7 @@ public:
 			for (int i = 0; i < m_num_elems; i++) {
 				a_grad += m_x_vals[i] * ((m_a * m_x_vals[i] + m_b) - m_y_vals[i]);
 			}
-			a_grad = (2 * b_grad) / m_num_elems;
+			a_grad = (2 * a_grad) / m_num_elems;
 
 			// take a step
 			m_a = m_a - (step * a_grad);
@@ -59,11 +59,26 @@ We want to regress at a certain x */
 
 private:
 
+	bool isConverged(double a, double b) {
+		double error = 0;
+		double thresh = 0.001;
+		for (int i = 0; i < m_num_elems; i++) {
+			error += ((m_a * m_x_vals[x] + m_b) - m_y_vals[i]) * ((m_a * m_x_vals[x] + m_b) - m_y_vals[i]);
+		}
+		error /= m_num_elems;
+		cout << "Error" << error << "\r\n";
+		bool res = (abs(error) > m_old_err - thresh && abs(error) < m_old_err + thresh) ? true : false;
+		m_old_err = abs(error);
+		return res;
+	}
+
 	vector<double> m_x_vals;
 	vector<double> m_y_vals;
 	double m_num_elems;
+	double m_old_err;
 	double m_a;
 	double m_b;
+	double x;
 };
 
 
