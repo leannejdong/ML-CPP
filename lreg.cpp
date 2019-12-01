@@ -14,7 +14,7 @@ class LinearRegression {
 public:
 	LinearRegression() {}
 	~LinearRegression() {}
-	LinearRegression(vector<double> & m_x_vals_, vector<double> m_y_vals_) : m_x_vals(m_x_vals),
+	LinearRegression(vector<double> & m_x_vals_, vector<double> m_y_vals_) : m_x_vals(m_x_vals_),
 	m_y_vals(m_y_vals_), m_num_elems(m_y_vals_.size()), m_old_err(std::numeric_limits<double>::max()) {}
 
 	void trainAlgorithm(int num_iters_, double a_init_, double b_init_) {
@@ -23,7 +23,7 @@ public:
 		m_a = a_init_;
 		m_b = b_init_;
 
-		while(iter < num_iters_) {
+		while(!isConverged(m_a,m_b) && iter < num_iters_) {
 			//update the gradient
 			double step = 0.02;
 			double a_grad = 0;
@@ -85,7 +85,7 @@ private:
 
 main (int argc, char ** argv){
 
-	vector<double> y({2.8,2.99,7.6,9,8.6});
+	vector<double> y({2.8,2.9,7.6,9,8.6});
 	vector<double> x({1,2,3,4,5});
 
 	LinearRegression lr(x,y);
