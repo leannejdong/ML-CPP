@@ -1,1 +1,262 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"m",
+				"m_b"
+			],
+			[
+				"m_x",
+				"m_x_vals"
+			],
+			[
+				"vector",
+				"vector\tstandard header"
+			],
+			[
+				"str",
+				"string\tstandard header"
+			],
+			[
+				"ios",
+				"iostream\tstandard header"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "lreg.cpp",
+			"settings":
+			{
+				"buffer_size": 2205,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "# include <iostream>"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 185.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/leanne/ML-CPP/knn.cpp",
+		"/home/leanne/ML-CPP/lreg.cpp",
+		"/home/leanne/software-engineering-concepts/chapt2.py",
+		"/home/leanne/software-engineering-concepts/chapt1.py",
+		"/home/leanne/explicit-algorithm-volterra/approxh/testhhs.cpp",
+		"/home/leanne/explicit-algorithm-volterra/approxh/hhsum.hpp",
+		"/home/leanne/cv_2020/ResearchStatement2019.tex",
+		"/home/leanne/Desktop/Personal/ResearchStatement2019.tex",
+		"/home/leanne/attractor/snse_random_attractor.tex",
+		"/home/leanne/explicit-algorithm-volterra/approxh/hhsum.cpp",
+		"/home/leanne/cv_2020/leanne_cv_02_10.tex",
+		"/home/leanne/explicit-algorithm-volterra/hhsum.cpp",
+		"/home/leanne/SNSE_spheres/snse_sphere_Beamer.tex",
+		"/home/leanne/PhD-presentation/snse_sphere_Beamer.tex",
+		"/home/leanne/TestingScripts/string.cpp",
+		"/home/leanne/TestingScripts/str1.cpp",
+		"/home/leanne/explicit-algorithm-volterra/norms.cpp",
+		"/home/leanne/cppmisc/hhsum.cpp",
+		"/home/leanne/hipper101/volterra3/voltra.cpp",
+		"/home/leanne/hipper101/volterra3/main1.cpp",
+		"/home/leanne/Desktop/Personal/leanne_cv.tex",
+		"/home/leanne/.config/sublime-text-3/Packages/User/LaTex.sublime-build",
+		"/home/leanne/Desktop/papers/SNSElevy1 (old).tex",
+		"/home/leanne/Desktop/Output_R/clust10_j1",
+		"/home/leanne/Documents/useful-command",
+		"/home/leanne/Desktop/Output_R/vic.txt",
+		"/home/leanne/.config/sublime-text-3/Packages/User/LaTeXTools.sublime-settings",
+		"/home/leanne/.cache/.fr-JGznjw/gedit-tm-autocomplete-1.0.5-gedit3/install.sh",
+		"/home/leanne/Desktop/papers/testart.tex",
+		"/home/leanne/Desktop/Input_R/main.tex",
+		"/media/leanne/A907-AF7D/copulas/codes/I have a dataset with 1-3 versions of the dependen",
+		"/home/leanne/Downloads/main.tex",
+		"/home/leanne/OccupationCVSetPreparation.py"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "lreg.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2205,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1879,
+								1879
+							]
+						],
+						"settings":
+						{
+							"auto_name": "# include <iostream>",
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/C++/C++ Single File.sublime-build",
+	"project": "lreg.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 129.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
