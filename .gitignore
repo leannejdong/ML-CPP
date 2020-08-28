@@ -82,7 +82,7 @@ fabric.properties
 *.exe
 *.out
 *.app
-
+lreg
 
 # CMake ================================
 cmake-build-*/
