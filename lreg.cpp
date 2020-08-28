@@ -1,6 +1,5 @@
 /* The purpose of this section is to implement linear regression */
 
-
 # include <iostream>
 # include <vector>
 # include <tuple>
@@ -12,18 +11,16 @@ using namespace std;
 
 class LinearRegression {
 public:
-	LinearRegression() {}
-	~LinearRegression() {}
-	LinearRegression(vector<double> & m_x_vals_, vector<double> m_y_vals_) : m_x_vals(m_x_vals_),
-	m_y_vals(m_y_vals_), m_num_elems(m_y_vals_.size()), m_old_err(std::numeric_limits<double>::max()) {}
+	LinearRegression(vector<double> & x_vals, vector<double> y_vals) : m_x_vals(x_vals),
+	m_y_vals(y_vals), m_num_elems(y_vals.size()), m_old_err(std::numeric_limits<double>::max()) {}
 
-	void trainAlgorithm(int num_iters_, double a_init_, double b_init_) {
+	void trainAlgorithm(int num_iters, double a_init, double b_init) {
 
 		int iter = 0;
-		m_a = a_init_;
-		m_b = b_init_;
+		m_a = a_init;
+		m_b = b_init;
 
-		while(!isConverged(m_a,m_b) && iter < num_iters_) {
+		while(!isConverged(m_a,m_b) && iter < num_iters) {
 			//update the gradient
 			double step = 0.02;
 			double a_grad = 0;
@@ -40,22 +37,19 @@ public:
 			m_b = m_b - (step * b_grad);
 			cout << "a:\t" << m_a << ", b:\t" << m_b << "\r\n";
 			cout << "grad_a:\t" << a_grad << ", b_grad:\t" << b_grad << "\r\n";
-			iter++;
+			++iter;
 
 		}
 
 	}
 
-	double regress(double x_){
-		double res = m_a * x_ + m_b;
+	double regress(double x){
+		double res = m_a * x + m_b;
 		return res;
 	}
 
 /* Here we want to train our algorithm with the public member function. Once we trained the algorithm,
 We want to regress at a certain x */
-
-
-
 
 private:
 
@@ -66,7 +60,7 @@ private:
 			error += ((m_a * m_x_vals[x] + m_b) - m_y_vals[i]) * ((m_a * m_x_vals[x] + m_b) - m_y_vals[i]);
 		}
 		error /= m_num_elems;
-		cout << "Error" << error << "\r\n";
+		cout << "Error: " << error << "\r\n";
 		bool res = (abs(error) > m_old_err - thresh && abs(error) < m_old_err + thresh) ? true : false;
 		m_old_err = abs(error);
 		return res;
@@ -81,9 +75,7 @@ private:
 	double x;
 };
 
-
-
-main (int argc, char ** argv){
+int main (){
 
 	vector<double> y({2.8,2.9,7.6,9,8.6});
 	vector<double> x({1,2,3,4,5});
@@ -97,4 +89,4 @@ main (int argc, char ** argv){
 	return 1;
 }
 
-
+//Finished in 0.6s
