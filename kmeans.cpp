@@ -122,3 +122,15 @@ int main () {
 }
 
 //Finished in 0.8s
+
+/*
+
+* Algorithm
+  assign initial means
+  while (not converged) do:
+  	assign labels
+  	compute the means
+* A data point is assigned the label of its closest centroid.
+* The means are computed for each label in the standard way.
+
+*/
